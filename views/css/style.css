@@ -1,0 +1,244 @@
+/* .logo {
+    text-align: center;
+    height: 80px;
+    background-image: url("../../public/img/logo.png");
+    /* background: -webkit-linear-gradient(left, #0072ff, #8811c5); */
+
+/* color: #fff; */
+
+/* 
+font-weight: bold;
+line-height: 80px;
+
+} */
+@media (min-width: @screen-sm-min) {
+}
+
+/* 中型设备（台式电脑，992px 起） */
+@media (min-width: @screen-md-min) {
+}
+
+/* 大型设备（大台式电脑，1200px 起） */
+@media (min-width: @screen-lg-min) {
+}
+
+.logo {
+  width: 30%;
+  max-width: 300px;
+  min-width: 120px;
+}
+
+.form-width {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-content {
+  padding: 5%;
+  border: 1px solid #ced4da;
+  margin-bottom: 2%;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+.btnSubmit {
+  border: none;
+  border-radius: 5px;
+  padding: 1%;
+  width: 100%;
+  cursor: pointer;
+  background: #089213;
+  color: #fff;
+}
+
+.register-body {
+  background-color: #f6f6f6;
+  height: 100vh;
+}
+
+.form-body {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.l-r-label {
+  font-size: 1.8rem;
+  border-radius: 10px;
+  font-family: Verdana;
+  margin-bottom: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  margin-top: 0;
+  width: 200px;
+}
+
+.username {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.drop-margin {
+  margin-right: 300px;
+}
+
+.body-l {
+  background-color: #ffffff;
+
+  border: 0;
+}
+
+.m-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.header {
+  border: 0 !important;
+}
+
+.body-content {
+  background-color: #fff;
+  max-width: 1600px;
+}
+
+.chat-box {
+  height: 500px;
+}
+
+.text-1 {
+  font-family: Consolas, monospace;
+  font-size: 1.5rem;
+  color: #44ada5;
+}
+
+.chat-text {
+  background-color: #44ada5;
+}
+
+.dropdown-content {
+  background-color: #ffffff;
+  margin: 0;
+  display: none;
+  min-width: 300px; /* Changed this to accomodate content width */
+  max-height: auto;
+  margin-left: -1px; /* Add this to keep dropdown in line with edge of navbar */
+  overflow: hidden; /* Changed this from overflow-y:auto; to overflow:hidden; */
+  opacity: 0;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+  will-change: width, height;
+  width: 100px;
+}
+.test-5::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+.test-5::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: skyblue;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+.test-5::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #ededed;
+  border-radius: 10px;
+}
+
+.nav-p {
+  padding-left: 10px;
+  padding-right: 50px;
+  background-color: #3f51b5;
+}
+
+.row-m {
+  margin-top: 50px;
+}
+#msg {
+  padding: 1px;
+  /* height: 1rem !important; */
+  margin: 0 !important;
+}
+.materialize-textarea #textarea {
+  margin-top: 1px;
+  min-height: 10px;
+}
+.message-body {
+  position: relative;
+  overflow: auto;
+  height: 400px;
+}
+.message-box-r,
+.message-box-l {
+  max-width: 80%;
+  margin: 5px 0 5px;
+  background-color: #00695c;
+  padding: 10px;
+  float: left;
+  border-radius: 10px;
+}
+.message-box-r {
+  float: right;
+  text-align: right;
+  background-color: #0277bd;
+}
+
+.message-box-b {
+  width: 100%;
+  margin: 2px 0 2px;
+  background-color: #012521;
+  padding: 3px 15px 3px;
+  float: left;
+  border-radius: 3px;
+}
+
+.body-wrap {
+  width: 100%;
+}
+
+.message-text,
+.message-text-r {
+  font-size: 1.1rem;
+}
+
+.message-text-b {
+  font: 1em sans-serif;
+}
+
+.meta-r,
+.message-text-r {
+  text-align: left;
+}
+
+.meta-r,
+.meta {
+  font-weight: 700;
+}
+
+.meta-b {
+  font-weight: 300;
+}
+
+#user-list {
+  color: white;
+}
+
+.user-list-body {
+  border-radius: 10px;
+  padding: 3px 10px 3px;
+}

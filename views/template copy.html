@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Expresser</title>
+    <!-- <link rel="stylesheet" href="views/css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="views/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link rel = "stylesheet"
+    href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel = "stylesheet"
+    href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+ <script type = "text/javascript"
+    src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+ <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+ </script>
+</head>
+
+<style>
+
+
+</style>
+
+
+<body>
+    <nav class="nav-p">
+		<div class="nav-wrapper">
+				<a href="#!" class="brand-logo">Logo</a>
+				<ul class="right hide-on-med-and-down">
+						
+						<!-- Dropdown Trigger -->
+                        {{if user}}
+						<li><a class="dropdown-button" href="#!" data-activates="dropdown" data-beloworigin="true">User<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                        {{else}}
+                        <li><a href="#!">Sass</a></li>
+						<li><a href="#!">Components</a></li>
+                        {{/if}}
+				</ul>
+		</div>
+</nav>
+<!-- Dropdown Structure -->
+<ul id="dropdown" class="dropdown-content collection">
+    <!-- <div class="dropdown-menu mr-5" aria-labelledby="dropdownMenuButton"> -->
+        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+        
+        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+    <!-- </div> -->
+</ul>
+    <!-- <header class="nav-wrapper">
+
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 border-bottom header shadow-sm bg-dark mb-0 m-center">
+            <h5 class="my-0 mr-md-auto font-weight-normal text-light">Johnson</h5>
+            <nav class="">
+                <a class="p-2 text-light" href="#">1</a>
+                <a class="p-2 text-light" href="#">2</a>
+                <a class="p-2 text-light" href="#">3</a>
+                <a class="p-2 text-light" href="#">4</a>
+            </nav> -->
+            {{if user}}
+            <div class="dropdown drop-margin">
+                <button class="btn btn-info dropdown-toggle mr-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  User
+                </button>
+                <div class="dropdown-menu mr-5" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item p-3">
+                        <h6 class="username">User:{{user.username}} </h6>
+                    </a>
+    
+                    <a class="dropdown-item" href="/profile">Profile</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                </div>
+            </div>
+            {{else}}
+            <a class="btn btn-success ml-1 mr-1" href="/login">Login</a>
+            <a class="btn btn-primary ml-1 mr-1" href="/register">Register</a> {{/if}}
+    
+        </div>
+        <!-- header end -->
+    
+    </header>
+        <!-- content start -->
+
+        {{block 'content'}}
+        <!-- default -->
+        {{/block}}
+    </body>
+        <!-- content end -->
+        <!-- footer start -->
+        <footer class="footer navbar fixed-bottom bg-dark p-4">
+            <div class="container ">
+                <!-- <span class="text-muted ">Place sticky footer content here.</span> -->
+            </div>
+        </footer>
+        <!-- footer end -->
+        <!-- jquery     -->
+        
+        <script>
+            (function($) {
+		$(function() {
+
+				$(".dropdown-button").dropdown();
+
+		}); // End Document Ready
+})(jQuery); // End of jQuery name space
+        </script>
+
+
+
+    </html>

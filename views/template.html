@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Expresser</title>
+    <!-- <link rel="stylesheet" href="views/css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="views/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link rel = "stylesheet"
+    href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel = "stylesheet"
+    href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+ <script type = "text/javascript"
+    src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+ <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+ </script>
+</head>
+
+<style>
+
+
+</style>
+
+
+<body>
+    <nav class="nav-p">
+		<div class="nav-wrapper row">
+				<a href="#!" class="brand-logo left">Logo</a>
+				<ul class="right">
+						
+						<!-- Dropdown Trigger -->
+                        {{if user}}
+						<li><a class="dropdown-button" href="#!" data-activates="dropdown" data-beloworigin="true">User<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                        {{else}}
+                        
+                        
+                        <div class="row">
+                            <a class="btn btn-success ml-1 mr-1" href="/login">Login</a>
+                            <a class="btn btn-primary ml-1 mr-1" href="/register">Register</a> 
+                        </div>
+
+                        {{/if}}
+				</ul>
+		</div>
+</nav>
+<!-- Dropdown Structure -->
+<ul id="dropdown" class="dropdown-content collection">
+    <!-- <div class="dropdown-menu mr-5" aria-labelledby="dropdownMenuButton"> -->
+        <!-- <li><a class="dropdown-item" href="/profile">Profile</a></li> -->
+        
+        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+    <!-- </div> -->
+</ul>
+        <!-- content start -->
+
+        {{block 'content'}}
+        <!-- default -->
+        {{/block}}
+    </body>
+        <!-- content end -->
+        <!-- footer start -->
+        <footer class="footer navbar fixed-bottom bg-dark p-4">
+            <div class="container ">
+                <!-- <span class="text-muted ">Place sticky footer content here.</span> -->
+            </div>
+        </footer>
+        <!-- footer end -->
+        <!-- jquery     -->
+        
+        <script>
+            (function($) {
+		$(function() {
+
+				$(".dropdown-button").dropdown();
+
+		}); // End Document Ready
+})(jQuery); // End of jQuery name space
+        </script>
+
+
+
+    </html>

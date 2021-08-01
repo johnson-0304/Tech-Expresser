@@ -1,0 +1,49 @@
+{{extend './template.html'}} {{block 'content'}}
+<!-- user content start -->
+{{if user}}
+<body class="body-l">
+  <div class="m-center body-content mt-5 rounded container-md">
+    <div class="chat-box row">
+      <div
+        class="
+          connected-user
+          col-md-3
+          offset-md-0 offset-sm-3 offset-xs-3
+          order-last
+        "
+      >
+        <div class="card" style="width: 18rem">
+          <div class="card-header font-weight-bold text-1">Connected User</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+      </div>
+      <div class="chat-content col-md-8 col-sm-12">
+        <div class="card">
+          <div class="card-header chat-text">Featured</div>
+          <div class="card-body">
+            <input
+              type="text"
+              class="form-control textarea-chat"
+              id="textarea"
+              placeholder="Enter Your Message Here"
+            />
+
+            <button type="button" class="btn btn-success mt-3 float-right">
+              Success
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- user content end -->
+  {{else}}
+  <!-- user content end -->
+</body>
+<div>Please Login</div>
+{{/if}} {{/block}}

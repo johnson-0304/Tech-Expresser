@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="views/css/bootstrap.css" />
+    <link rel="stylesheet" href="views/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+</head>
+
+<style>
+    body {
+        background-color: #f6f6f6;
+    }
+</style>
+
+<body>
+    <!-- register body -->
+    <div class="register-body m-auto">
+        <class class="container register-form rounded m-auto">
+            <div class="form rounded m-auto p-5">
+                <div class="text-center">
+                    <img src="../public/img/logo.png " class="logo" alt="">
+                </div>
+                <div class="text-center mt-5 ">
+                    <h3 class="l-r-label">Register</h3>
+
+                </div>
+                <!-- <div class="text-center mt-5 ">
+                    
+                </div> -->
+
+                <form id="register_form" method="post" action="/register">
+                    <div class="form-content mt-1 p-3 form-body form-width">
+
+                        <!-- <h3 class="badge badge-pill badge-danger w-100 p-1">{{err_message}}</h3> -->
+                        {{if err_message}}
+                        <div class="alert alert-danger" id="alert" role="alert">
+                            {{err_message}}
+                            <button type="button" class="close" id="close"><span aria-hidden="true">&times;</span</button>
+                        </div>
+                        {{/if}}
+
+                        <div class="row">
+                            <div class="col-md-12"></div>
+                            <class class="col-md-12">
+                                <h6 class="mb-2">Username</h6>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Username *" id="username" name="username" value="{{form && form.username}}" />
+                                </div>
+                                <h6 class="mb-2">Email</h6>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email *" id="email" name="email" value="{{form && form.email}}" />
+                                </div>
+
+                                <h6 class="mb-2">Password</h6>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" id="password" name="password" />
+                                </div>
+
+                            </class>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 text-center">Register</button>
+                        <div class="mt-4">
+                            <h6>Already have account? <a href="/login">Click Here to Login</a></h6>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </class>
+
+
+    </div>
+
+    </div>
+    <!-- register body end -->
+    <!-- jquery     -->
+    <script src="/views/jquery/jquery-3.6.0.js"></script>
+
+    <!-- submit form -->
+    <script>
+        $('#register_form').on('submit', function(e) {
+            //e.preventDefault()
+            var formData = $(this).serialize()
+
+            $.ajax({
+                url: '/register',
+                type: 'post',
+                data: formData,
+                dataType: 'json',
+                success: function(data) {
+                    var err_code = data.err_code
+                    if (err_code === 0) {
+                        window.location.href = '/'
+                    } else if (err_code === 1) {
+                        window.alert('invalid username or password')
+                    } else if (err_code === 500) {
+                        window.alert('server error, please try it later！')
+                    }
+                }
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#close").click(function() {
+                $("#alert").hide();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
